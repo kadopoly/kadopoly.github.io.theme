@@ -1,0 +1,19 @@
+title: kadopoly.github.io.theme
+description: theme for kadopoly.github.io
+baseurl: ""
+url: ""
+
+author:
+  name: kadopoly
+  github: kadopoly
+  twitter: kadopoly
+
+paginate: 3
+paginate_path: page:num
+
+sass:
+  style: expanded
+
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
