@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<main>
+  {% capture description %}{{ page.date | date: "%Y-%m-%d" }}{% endcapture %}
+  {% include page_header.html description=description %}
+  <article>
+    {{ content }}
+  </article>
+  {% include page_navigation.html %}
+</main>
+
