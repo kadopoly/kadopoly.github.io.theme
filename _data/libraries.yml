@@ -1,0 +1,16 @@
+Jekyll:
+  license: MIT License
+  license-href: https://github.com/jekyll/jekyll/blob/d87ee5af03a1cec0c6d992fb540babdbe392c739/LICENSE
+jekyll-paginate:
+  license: MIT License
+  license-href: https://github.com/jekyll/jekyll-paginate/blob/6c79ccf6b21e16cf455e049257349a61228a5f90/LICENSE.txt
+jekyll-feed:
+  license: MIT License
+  license-href: https://github.com/jekyll/jekyll-feed/blob/b907a1b2ac9e270f59dde88fab9a37542342dfb3/LICENSE.txt
+Font-Awesome:
+  license: SIL OFL 1.1 License
+  license-href: https://github.com/FortAwesome/Font-Awesome/blob/1975bba5c4ade236c02bf2e5f9551160ee85109d/LICENSE.txt
+normalize-scss:
+  license: MIT License
+  license-href: https://github.com/JohnAlbin/normalize-scss/blob/2f556436e941154c6acec495facf7196d121f75b/LICENSE.md
+  
