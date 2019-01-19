@@ -1,0 +1,17 @@
+<section class="posts chronological paginated">
+  <ul>
+    {% for post in paginator.posts %}
+      {% capture post_date %}{{ post.date | date: '%Y-%m-%d' }}{% endcapture %}
+      {% capture post_title %}{{ post.title | escape }}{% endcapture %}
+      <li title="{{ post_date }}: {{ post_title }}">
+        <time datetime="{{ post_date }}">
+          {{ post_date }}
+        </time>
+        <a href="{{ post.url | relative_url }}" title="{{ post_title }}">
+          {{ post_title }}
+        </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
