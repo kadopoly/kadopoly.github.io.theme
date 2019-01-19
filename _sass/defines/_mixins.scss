@@ -1,0 +1,19 @@
+@mixin fontawesome-regular($code)
+{
+  font-family: "Font Awesome 5 Free";
+  content: fa-content($code);
+}
+
+@mixin fontawesome-solid($code)
+{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: fa-content($code);
+}
+
+@mixin fontawesome-brands($code)
+{
+  font-family: "Font Awesome 5 Brands";
+  content: fa-content($code);
+}
+
