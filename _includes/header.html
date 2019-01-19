@@ -5,7 +5,7 @@
         <li id="{{ bookmark[0] | escape }}"
             class="{% if page.id == bookmark[0] %}active{% endif %}">
           <a href="{{ bookmark[1].path | relative_url }}"
-             class="fa {{ bookmark[1].className }}"
+             class="fa {{ bookmark[1].class }}"
              title="{{ bookmark[1].caption | escape }}">
             {{ bookmark[1].caption | escape }}
           </a>
