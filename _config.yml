@@ -1,16 +1,17 @@
-title: kadopoly.github.io.theme
+title: title
 description: theme for kadopoly.github.io
 baseurl: ""
 url: ""
+logo: ""
 
 github:
   repository_url: https://github.com/kadopoly/kadopoly.github.io
 
 paginate: 3
-paginate_path: page:num
+paginate_path: :num
 
 sass:
-  style: expanded
+  style: compressed
 
 plugins:
   - jekyll-paginate
