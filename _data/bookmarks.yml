@@ -1,0 +1,9 @@
+home:
+  caption: トップ
+  path: /
+  className: fa-home
+about:
+  caption: 概要
+  path: /about/
+  className: fa-info-circle
+
