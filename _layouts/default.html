@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_newlines | escape | truncate: 160 }}" />
+  <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+  {% feed_meta %}
+</head>
+<body id="{{ page.id }}" class="{{ page.layout }}">
+{% include header.html %}
+{{ content }}
+{% include footer.html %}
+</body>
+</html>
+
