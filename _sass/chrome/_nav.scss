@@ -1,0 +1,95 @@
+// color defs
+$nav-bg-color: $primary-color;
+$nav-item-color: rgb(192, 135, 60);
+$nav-item-active-color: rgb(100, 75, 30);
+$nav-item-hover-bg-color: rgba(192, 135, 60, 0.2);
+$nav-item-description-bg-color: rgba(192, 135, 60, 0.8);
+$nav-border-color: rgba(192, 135, 60, 0.1);
+
+// site navigation
+body > header > nav
+{
+  background-color: $nav-bg-color;
+  // border-width depends on where nav is attached (display dimension)
+  border: 0 solid $nav-border-color;
+  box-shadow: 0.1em 0.1em 0.1em $warm-shade-color;
+
+  li
+  {
+    display: block;
+
+    a
+    {
+      display: block;
+      text-decoration: none;
+      // text should be hidden except for the icon
+      color: transparent;
+      word-break: keep-all;
+      overflow: hidden;
+
+      // icon
+      &::before
+      {
+        display: inline-block;
+        border-radius: 50%;
+        padding: 0.5em;
+        width: 1em;
+        height: 1em;
+        box-sizing: content-box;
+        color: $nav-item-color;
+        transition: background-color 0.25s ease-in-out;
+      }
+
+      &:hover::before
+      {
+        background-color: $nav-item-hover-bg-color;
+      }
+
+      &::after
+      {
+        display: inline-block;
+        visibility: hidden;
+        word-break: keep-all;
+        border-radius: 0.5em;
+        background-color: $nav-item-description-bg-color;
+        color: white;
+        font-size: xx-small;
+        font-weight: bold;
+        text-align: left;
+        content: attr(title);
+        opacity: 0;
+        padding: 0.5em;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:hover::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    // link to Home
+    &#home
+    {
+      border: 0 solid rgba(192, 135, 60, 0.2);
+      background-color: rgba(192, 135, 60, 0.3);
+
+      a::before
+      {
+        color: white;
+        //background-color: rgba(192, 135, 60, 0.4);
+      }
+      a:hover::before
+      {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    // active item (where I'm on)
+    &.active a::before
+    {
+      color: $nav-item-active-color;
+    }
+  }
+}
+

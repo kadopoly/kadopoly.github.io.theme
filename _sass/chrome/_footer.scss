@@ -1,0 +1,52 @@
+// color defs
+$footer-base-color: #aaa;
+$footer-border-color: lighten($footer-base-color, 25%);
+
+// site footer
+body > footer
+{
+  border-top: thin solid $footer-border-color;
+  font-size: smaller;
+  color: $footer-base-color;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  a
+  {
+    color: $footer-base-color;
+    &:link { text-decoration: none; }
+    &:hover, &:active { border-bottom: thin solid; }
+  }
+
+  .license-note
+  {
+    flex: auto;
+
+    &.license-cc-zero::before
+    {
+      @include fontawesome-brands($fa-var-creative-commons);
+      display: inline;
+      font-size: xx-large;
+      margin-right: $decoration-spacing;
+      vertical-align: middle;
+    }
+  }
+
+  .links
+  {
+    li
+    {
+      display: inline-block;
+      margin: 0 $decoration-spacing;
+    }
+    .revisions::before
+    {
+      @include fontawesome-regular($fa-var-clock);
+      margin-right: 0.5em;
+      width: 1em;
+    }
+  }
+
+}

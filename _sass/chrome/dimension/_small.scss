@@ -1,0 +1,48 @@
+// nav should goes to the top where screen is small
+body > header > nav
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom-width: thin;
+  font-size: 120%;
+
+  ul
+  {
+    margin: 0;
+    padding: 0;
+  }
+
+  li
+  {
+    display: inline-block;
+    margin: 0;
+    position: relative;
+
+    a
+    {
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      padding: 0.5em;
+      width: 3em;
+      height: 3em;
+      box-sizing: border-box;
+    }
+
+    &#home
+    {
+      border-right-width: thin
+    }
+
+    a:hover::after
+    {
+      position: absolute;
+      z-index: 100;
+      top: 85%;
+      left: 1em;
+    }
+  }
+}
+

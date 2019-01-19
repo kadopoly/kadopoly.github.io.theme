@@ -1,0 +1,14 @@
+@import "_nav";
+@import "_footer";
+
+// for smaller screens
+@media screen and (max-width: $dimension-large-threshold)
+{
+  @import "dimension/_small";
+}
+// for larger screens
+@media screen and (min-width: $dimension-large-threshold)
+{
+  @import "dimension/_large";
+}
+

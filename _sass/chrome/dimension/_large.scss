@@ -1,0 +1,48 @@
+// nav should goes to the left where screen is large enough
+body > header > nav
+{
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-right-width: thin;
+  font-size: 150%;
+  text-align: center;
+
+  ul
+  {
+    margin: 0;
+    padding: 0;
+  }
+
+  // and links should be aligned in column direction
+  li
+  {
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    &#home
+    {
+      border-bottom-width: thin;
+    }
+
+    a
+    {
+      border: none;
+      padding: 0.5em;
+      width: 3em;
+      height: 3em;
+      box-sizing: border-box;
+    }
+
+    a::after {
+      position: absolute;
+      left: 90%;
+      top: 2em;
+      z-index: 100;
+    }
+
+  }
+}
+
