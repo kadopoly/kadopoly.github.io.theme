@@ -1,23 +1,24 @@
 ---
-layout: page
-title: About
-description: test about pafe
+layout:    page
+title:     概要
 permalink: /about/
+id:        about
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+連絡先
+---
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+{{ site.data.author.description }}
+
+{% include social_network_links.html %}
 
 
-[jekyll-organization]: https://github.com/jekyll
+FLOSS ライセンス
+---
 
-## Lorem ipsum
+{% for library in site.data.libraries %}
+### {{ library[0] | escape }}
+[{{ library[1].license }}]({{ library[1].license-href }})
+{% endfor %}
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
