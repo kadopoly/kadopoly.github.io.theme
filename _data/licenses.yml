@@ -1,0 +1,5 @@
+cc0: &cc0
+  description: CC0
+  href: https://creativecommons.org/publicdomain/zero/1.0/
+  class: fab fa-creative-commons-zero
+default: *cc0
