@@ -1,0 +1,141 @@
+// color defs
+$heading-color: #555;
+$list-decoration-color: rgb(230, 200, 150);
+
+// page main content
+body > main
+{
+  color: $text-color;
+
+  h1
+  {
+    margin-top: 1.25em;
+    font-size: xx-large;
+    font-weight: 800;
+    font-feature-settings: palt;
+    color: $heading-color;
+  }
+
+  h2
+  {
+    margin: 2em 0 1.5em 0;
+    font-size: x-large;
+    font-weight: 800;
+    font-feature-settings: palt;
+    color: $heading-color;
+  }
+
+  p
+  {
+    margin: 0 0 1em 0;
+    line-height: 1.7;
+  }
+
+  ul
+  {
+    list-style: none;
+    margin: 1.5em 0;
+    padding: 0 3em;
+
+    li
+    {
+      margin-top: 0.5em;
+    }
+    li::before
+    {
+      @include fontawesome-solid($fa-var-check);
+      color: $list-decoration-color;
+      margin-right: 0.75em;
+      vertical-align: middle;
+    }
+    & li + li
+    {
+      margin-top: 0.75em;
+    }
+  }
+
+  ol
+  {
+    list-style: none;
+    counter-reset: section;
+    margin: 1.5em 0;
+    padding: 0 3em;
+
+    li::before
+    {
+      counter-increment: section;
+      content: counters(section, "-") ".";
+      color: $list-decoration-color;
+      font-weight: bold;
+      margin-right: 1em;
+      vertical-align: middle;
+    }
+
+    & li + li
+    {
+      margin-top: 0.75em;
+    }
+  }
+
+  @import "_list.scss";
+
+  a
+  {
+    color: $link-color;
+    text-decoration: none;
+    padding-bottom: 0.25em;
+
+    &:hover
+    {
+      color: $link-color-hover;
+      border-bottom: thin dashed;
+    }
+  }
+
+  article
+  {
+    margin-top: 2em;
+  }
+
+  .date, .description
+  {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 1em;
+  }
+
+  .more
+  {
+    text-align: right;
+    a
+    {
+      color: rgb(180, 150, 80);
+    }
+    a::before
+    {
+      @include fontawesome-regular($fa-var-hand-point-right);
+      color: #000;
+      margin-right: 0.4em;
+    }
+  }
+
+  // inline but not in code block (work-around)
+  code.highlighter-rouge
+  {
+    line-height: 2.0;
+    border-radius: 0.25em;
+    padding: 0.2em 0.5em;
+    background: #eee;
+    color: #333;
+    font-family: monospace;
+  }
+
+  .highlight
+  {
+    border-radius: 0.5em;
+    line-height: 1.5;
+    padding: 0.5em 1em;
+    font-family: monospace;
+  }
+}
+

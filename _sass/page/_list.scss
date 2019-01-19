@@ -1,0 +1,83 @@
+ul.directory-tree
+{
+  margin: 2em 1em;
+  font-family: monospace;
+
+  &, & ul
+  {
+    list-style: none;
+  }
+  & ul
+  {
+    margin: 0 0 0 1em;
+    padding-left: 1em;
+  }
+  &::before
+  {
+    margin-right: 1em;
+    width: 1em;
+  }
+  .directory::before
+  {
+    @include fontawesome-regular($fa-var-folder);
+    color: rgb(200, 180, 0);
+  }
+  .file::before
+  {
+    @include fontawesome-regular($fa-var-file);
+    color: #555;
+  }
+}
+
+ul.social-network-links
+{
+  display: flex;
+  font-size: larger;
+
+  li
+  {
+    display: inline-block;
+    margin: 0 1em 0 0;
+
+    &::before
+    {
+      width: 1em;
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.page-navigation ul
+{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em 0 0;
+
+  .previous
+  {
+    margin-left: auto;
+    &::before { display: none; }
+    &::after {
+      @include fontawesome-solid($fa-var-arrow-right);
+      color: black;
+      margin-left: 0.5em;
+    }
+  }
+  .next::before
+  {
+    @include fontawesome-solid($fa-var-arrow-left);
+    color: black;
+    margin-right: 0.5em;
+  }
+}
+
+.chronological.posts ul {
+  line-height: 1.5;
+
+  time::after {
+    content: ":";
+    color: $text-color-dimmed;
+    margin-right: 1em;
+  }
+}
+

@@ -1,0 +1,14 @@
+body > main,
+body > footer
+{
+  max-width: $dimension-large-threshold;
+  margin: auto;
+  // make enough room for the left site nav
+  padding: 1rem 5rem 1rem 10rem;
+}
+
+body > main
+{
+  padding-top: 0;
+}
+
