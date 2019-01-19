@@ -1,4 +1,5 @@
 name: kadopoly
+description: かどまつ ( kadopoly )
 
 networks:
   twitter: https://twitter.com/kadopoly/
