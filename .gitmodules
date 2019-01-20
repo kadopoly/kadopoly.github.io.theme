@@ -4,3 +4,6 @@
 [submodule "libs/jekyll-pygments-themes"]
 	path = libs/jekyll-pygments-themes
 	url = https://github.com/jwarby/jekyll-pygments-themes.git
+[submodule "libs/normalize-scss"]
+	path = libs/normalize-scss
+	url = https://github.com/JohnAlbin/normalize-scss.git
