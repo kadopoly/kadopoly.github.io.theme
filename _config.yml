@@ -4,8 +4,7 @@ baseurl: ""
 url: ""
 logo: /assets/svg/logo.svg
 
-github:
-  repository_url: https://github.com/kadopoly/kadopoly.github.io
+repository: kadopoly/kadopoly.github.io
 
 paginate: 3
 paginate_path: :num
