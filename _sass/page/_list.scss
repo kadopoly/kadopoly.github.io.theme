@@ -77,22 +77,24 @@ ul.social-network-links
     &::before { display: none; }
     &::after {
       @include fontawesome-solid($fa-var-arrow-right);
-      color: black;
+      color: $text-color;
       margin-left: 0.5em;
     }
   }
   .next::before
   {
     @include fontawesome-solid($fa-var-arrow-left);
-    color: black;
+    color: $text-color;
     margin-right: 0.5em;
   }
 }
 
-.chronological.posts ul {
+.chronological.posts ul
+{
   line-height: 1.5;
 
-  time::after {
+  time::after
+  {
     content: ":";
     color: $text-color-dimmed;
     margin-right: 1em;
