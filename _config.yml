@@ -1,8 +1,8 @@
-title: title
+title: 秋色柑橘日和
 description: theme for kadopoly.github.io
 baseurl: ""
 url: ""
-logo: ""
+logo: /assets/svg/logo.svg
 
 github:
   repository_url: https://github.com/kadopoly/kadopoly.github.io
