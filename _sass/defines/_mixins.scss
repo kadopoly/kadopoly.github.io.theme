@@ -17,3 +17,12 @@
   content: fa-content($code);
 }
 
+@mixin apply-brand-color($key)
+{
+  $brand-colors: (
+    $fa-var-twitter: #00aced,
+    $fa-var-github: #333
+  );
+
+  color: map-get($brand-colors, $key);
+}
