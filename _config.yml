@@ -16,3 +16,6 @@ sass:
 plugins:
   - jekyll-paginate
   - jekyll-feed
+
+exclude:
+  - libs
