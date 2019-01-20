@@ -1,6 +1,6 @@
 <ul class="social-network-links">
   {% for network in site.data.author.networks %}
-    <li id="{{ network[0] }}" class="fab fa-{{ network[0] }}">
+    <li id="{{ network[0] }}" class="{{ network[0] }}">
       <a href="{{ network[1] }}">
         {{ network[0] }}
       </a>
