@@ -31,18 +31,36 @@ ul.directory-tree
 
 ul.social-network-links
 {
-  display: flex;
-  font-size: larger;
+  padding: 0;
 
   li
   {
     display: inline-block;
-    margin: 0 1em 0 0;
+    margin: 0;
 
     &::before
     {
-      width: 1em;
       margin-right: 0.5em;
+    }
+    &:not(:last-child)::after
+    {
+      content: "|";
+      color: $text-color-hazy;
+      margin: 0 1em;
+    }
+    &.twitter::before
+    {
+      @include fontawesome-brands($fa-var-twitter);
+      @include apply-brand-color($fa-var-twitter);
+    }
+    &.pixiv::before
+    {
+      @include with-icon($with-icon-key-pixiv);
+    }
+    &.github::before
+    {
+      @include fontawesome-brands($fa-var-github);
+      @include apply-brand-color($fa-var-github);
     }
   }
 }
