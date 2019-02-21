@@ -10,7 +10,7 @@
   </p>
   <ul class="links">
     <li class="revisions">
-      <a href="{{ site.github.repository_url }}/commits/{{ site.branch }}{{ page.path }}"
+      <a href="{{ site.github.repository_url }}/commits/{{ site.github.source.branch | default: 'master' }}/{{ page.path }}"
          title="このページの編集履歴">
         編集履歴
       </a>
